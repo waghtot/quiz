@@ -42,10 +42,14 @@ class Mstat:
     def get_all_time_stat(self):
         allanswers = len(self.mystat)
         totaltime = 0
-        for time in self.mystat:
-            totaltime += time['qtime']
+        if (len(self.mystat)>1):
+            for time in self.mystat:
+                totaltime += time['qtime']
+                
+            average = int(totaltime / allanswers)
+        else:
+            average = 0
 
-        average = int(totaltime / allanswers)
         print(f"\nYour average answer time is: {average} seconds")
         return average
 
