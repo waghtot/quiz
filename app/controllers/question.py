@@ -7,6 +7,8 @@ class Question:
 
         left, right, linit, rinit = self.set_factor(left), self.set_factor(right), left, right
         '''
+        first digit = factor lenght
+        second digit defined factor as odd or even i.e. 10 = 2, 11 = 3, 20 = 14, 21 = 11 ...
         0 = even numbers
         1 = odd numbers
         '''
@@ -35,7 +37,6 @@ class Question:
         value = self.gen_factor(int(value), int(str(number)[1]))
         return(value)
 
-
     def gen_factor(self, number, ntype):
 
         left = number
@@ -44,7 +45,6 @@ class Question:
         while (factor % 2 != ntype):
             factor = self.gen_number(left, right)
         return factor
-
 
     def get_range(self, number):
 
@@ -55,11 +55,9 @@ class Question:
             value = value - 1
         return value
 
-
     def gen_number(self, left, right):
 
         return random.randint(left, right)
-
 
     def gen_answer(self, left, right):
 
@@ -77,7 +75,6 @@ class Question:
         answer = []
         answer={'a':mylist[0],'b':mylist[1],'c':mylist[2],'d':a}
         return answer
-
 
     def check_answer(self, list):
         
