@@ -1,6 +1,6 @@
 
 import uuid
-class master:
+class Master:
 
     def set_user_id(self):
         global user_id

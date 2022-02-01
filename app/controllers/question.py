@@ -1,7 +1,7 @@
 import random
 from mstat import *
 
-class question:
+class Question:
 
     def __init__(self, left = 10, right = 10):
 
@@ -22,9 +22,9 @@ class question:
 
         if(len(list)>0):
 
-            mstat().add_stat(linit, rinit, list['d'])
-            self.check_answer(list)
-
+            Mstat().add_stat(linit, rinit, list['d'])
+            if(self.check_answer(list) == True):
+               Question()
 
     def set_factor(self, number = 10):
 
@@ -90,14 +90,14 @@ class question:
 
             if(answer == 'q'):
                 print(f"\nThank you for your time\nI hope you enjoyed that game.")
-                exit
+                return False
             else:
 
-                mstat().update_stat(list[answer])
+                Mstat().update_stat(list[answer])
 
                 if(list['d'] == list[answer]):
                     print(f"\nYes, {list['d']} is correct answer !!!\n")
-                    return question()
                 else:
                     print(f"\nNo. Correct answer is: {list['d']}. Try again.\n")
-                    return question()
+
+            return True
