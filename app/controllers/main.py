@@ -1,13 +1,16 @@
 from tkinter import *
-from show import *
+from master import *
+from start import *
+# from show import *
+# from welcome import *
+# from register import *
 
+class ButtonApp(Tk, Master):
 
-class ButtonApp(Tk):
 
     def __init__(self):
         super().__init__()
-        Show()
-
+        Start()
 
 if __name__ == "__main__":
     app = ButtonApp()

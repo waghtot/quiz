@@ -23,7 +23,7 @@ class Question:
         print(f"a) {list['a']}, b) {list['b']}, c) {list['c']}\n")
 
         if(len(list)>0):
-
+            print(list['d'])
             Mstat().add_stat(linit, rinit, list['d'])
             if(self.check_answer(list) == True):
                Question()

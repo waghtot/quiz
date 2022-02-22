@@ -1,14 +1,15 @@
 from datetime import *
-from master import *
+# # from master import *
+# import master
 
-class Mstat:
+class Mstat():
 
     mystat = []
-    
+
     def add_stat(self, left, right, qanswer):
 
         row = {
-                'uid':str(Master().get_user_id()),
+                'uid':str(self.user_id),
                 'left':left,
                 'right':right,
                 'qstart':self.get_time(),
